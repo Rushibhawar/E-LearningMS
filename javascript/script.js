@@ -44,7 +44,7 @@ function submitForm(){
         type = stockMarket.value;
     }
 	
-	var book = new Book(name.value, author.value, type.value);
+	var book = new Book(name.value, author.value, type);
 	var display = new Display();
 	
 	if(name == null || author == null || type == null || name == "" || author == "" ) {
