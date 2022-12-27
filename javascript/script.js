@@ -29,7 +29,7 @@ Display.prototype.validate = function (book) {
 // function handleForm(event) { event.preventDefault(); } 
 // form.addEventListener('submit', handleForm);
 function submitForm(){
-	
+	event.preventDefault();
 	console.log("inside function ")
 	var name = document.getElementById("inputBookname");
 	var author = document.getElementById("inputBookAuthor");
