@@ -25,9 +25,9 @@ Display.prototype.validate = function (book) {
     }
 }
 
-var form = document.getElementById("myform");
-function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
+// var form = document.getElementById("myform");
+// function handleForm(event) { event.preventDefault(); } 
+// form.addEventListener('submit', handleForm);
 function submitForm(){
 	
 	console.log("inside function ")
