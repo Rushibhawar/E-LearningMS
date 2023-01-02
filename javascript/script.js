@@ -25,11 +25,11 @@ Display.prototype.validate = function (book) {
     }
 }
 
-// var form = document.getElementById("myform");
-// function handleForm(event) { event.preventDefault(); } 
-// form.addEventListener('submit', handleForm);
+var form = document.getElementById("myform");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
 function submitForm(){
-	event.preventDefault();
+	//event.preventDefault();
 	console.log("inside function ")
 	var name = document.getElementById("inputBookname");
 	var author = document.getElementById("inputBookAuthor");
@@ -63,16 +63,24 @@ function submitForm(){
 
 /*Login form*/
 function loginForm() {
-	 var firstName = document.forms["myForm"]["firstName"].value;
-	 var lastName = document.forms["myForm"]["lastName"].value;
+	event.preventDefault();
+	 var firstName = document.forms["myForm"]["userName"].value;
+	 var password = document.forms["myForm"]["password"].value;
 	 var city = document.forms["myForm"]["inputCity"].value;
 	 var phone = document.forms["myForm"]["inputPhone"].value;
-
+	 var matchPassword = 1234;
 	 //var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
 	 
-	 if(firstName == "" || lastName == "" || city == "" || city == "DEFAULT" || phone == "") {
+	 
+	 if(userName == "" || city == "" || city == "DEFAULT" || phone == "") {
 		//document.getElementById("wrong-details-alert").style.display = "block";
 		alert("Please enter the details properly");
+	 }
+	 else if(password != matchPassword) {
+		 document.getElementById("invalid-password").style.display = "block";
+		 $("#invalid-password").keydown(function() {
+			 document.getElementById("invalid-password").style.display = "none";
+		 });
 	 }
 	 else {
 		 
